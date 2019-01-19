@@ -14,7 +14,7 @@ class ClassList extends Component {
     componentDidMount() {
         const axios = require('axios');
         var classList = this.props.match.params.class;
-        axios.get('http://localhost:3000/students?class=' + classList)
+        axios.get('http://localhost:3005/students?class=' + classList)
             .then(response => {
                 this.setState({
                     students: response.data

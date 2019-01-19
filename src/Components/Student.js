@@ -12,7 +12,7 @@ class Student extends Component {
     componentDidMount() {
         const axios = require('axios');
         var {id} = this.props.match.params;
-        axios.get('http://localhost:3000/students/' + id)
+        axios.get('http://localhost:3005/students/' + id)
             .then(response => {
                 this.setState({
                     studentInfo: response.data
